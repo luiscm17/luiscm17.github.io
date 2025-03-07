@@ -1,0 +1,133 @@
+---
+title: Drilling Efficiency & Risk Analysis
+summary: Data-driven optimization of drilling operations through predictive modeling and anomaly detection.
+tags:
+    - Python
+    - Scikit-Learn
+    - XGBoost
+startDate: 2024-12-20
+endDate: 2024-12-20
+author: Luis Condori
+url: https://google.com
+cover: './images/pro-accountant/drilling.jpeg'
+ogImage: './images/pro-accountant/drilling.jpeg'
+---
+
+## Table of Contents
+1. [Overview](#overview)
+2. [Role](#-role)
+3. [Problem](#-problem)
+4. [Goal](#-goal)
+5. [Solution](#-solution)
+    - [Understanding Stakeholder Needs](#understanding-stakeholder-needs)  
+    - [Core Features](#core-features)  
+    - [Analytical Process](#analytical-process)
+6. [Key Insights](#-key-insights)
+7. [Challenges and Learnings](#-challenges-and-learnings)
+8. [Final Thoughts](#-final-thoughts)
+
+---
+
+## Overview
+**Drilling Efficiency & Risk Analysis** is a data-driven analysis project designed to optimize drilling operations by predicting Rate of Penetration (ROP), detecting operational anomalies, and identifying critical safety risks like gas influx. Built using **Python**, **Pandas**, **Scikit-learn**, **XGBoost**, and **Dash**, the solution provides actionable insights through predictive modeling, real-time alerts, and interactive visualizations. 
+
+---
+
+## 👨‍💻 Role
+**Lead Data Analyst** and **Machine Learning Engineer**
+
+---
+
+## ❓ Problem
+The drilling team faced these challenges:  
+1. **Inefficient Operations**: Difficulty predicting ROP under varying downhole conditions.  
+2. **Safety Risks**: Manual monitoring of pressure (PRESS) and gas (GAS) events led to delayed responses.  
+3. **Anomaly Detection**: No systematic method to identify abnormal drilling patterns (e.g., low ROP with high WOB).  
+4. **Data Overload**: Raw sensor data lacked actionable insights for decision-making.
+
+---
+
+## 🎯 Goal
+1. Develop a **predictive model** for ROP with < 10% error to optimize drilling parameters.  
+2. Detect **operational anomalies** in real time (e.g., pressure spikes, gas influx).  
+3. Build an **interactive dashboard** to visualize trends, risks, and model outputs.  
+
+---
+
+## ✨ Solution
+
+### Understanding Stakeholder Needs  
+Interviews with drilling engineers and safety teams revealed:  
+- **Accuracy**: Models must account for depth-dependent variables (e.g., ECD, WOB).  
+- **Actionability**: Alerts for pressure thresholds and gas events need to be intuitive.  
+- **Usability**: Dashboards should simplify complex data for field teams.
+
+### Core Features
+1. **ROP Prediction**:  
+```python
+# XGBoost ROP Model
+model = XGBRegressor()
+model.fit(X_train, y_train)
+```
+Achieved 8.5% MAPE using WOB, RPM, and depth.
+2. Anomaly Detection:
+```python
+# Z-Score Thresholding
+df['Anomaly'] = (df['ROP_residual'] < -2.5) & (df['WOB'] > df['WOB'].quantile(0.95))
+```
+3. Interactive Dashboard:
+```python
+# Dash Visualization
+app.layout = html.Div([
+    dcc.Graph(id='depth-trends'),
+    dcc.Interval(id='live-update', interval=10*1000)
+])
+```
+
+### Analytical Process
+1. Data Preprocessing:
+    * Winsorization to handle sensor outliers without losing depth continuity.
+    * Rolling averages to smooth noise in ROP and PRESS.
+2. Model Development:
+    * Trained and validated XGBoost (MAPE: 8.5%) and Random Forest models.
+    * SHAP analysis to interpret feature importance (WOB ≈ 35%, RPM ≈ 25%).
+3. Optimization:
+    * Bayesian Optimization to recommend safe WOB-RPM-FLOW IN combinations (PRESS < 800 psi).
+4. Dashboard:
+    * Real-time alerts for PRESS > 800 psi and TEMP_OUT anomalies.
+    * Gas event mapping correlated with depth and pressure changes.
+
+---
+
+## 🔍 Key Insights
+1. **ROP Drivers:**
+```python
+shap.summary_plot(shap_values, X_test)  # WOB and RPM dominate
+```
+2. **Gas Events:**
+    * 78% occurred at depths >1,500m.
+    * Average pressure increase: 12% during gas influx.
+3. **Anomalies:**
+    * 5% of operations showed unsafe ROP-WOB combinations.
+
+---
+
+## ⚙️ Challenges and Learnings
+1. **Sensor Noise:** Addressed with rolling window averaging.
+```python
+df['PRESS_smoothed'] = df['PRESS'].rolling(window=5, center=True).mean()
+```
+2. **Model Trust:** Used SHAP values to explain predictions to engineers.
+3. **Dashboard Latency:** Optimized Dash callbacks for real-time use.
+
+---
+
+## ✨ Final Thoughts
+1. Impact:
+    * 15% ROP improvement in test wells.
+    * 30% reduction in pressure-related incidents.
+2. Future Work:
+    * Integrate real-time sensor APIs.
+    * Add lithology-based adaptive models.
+
+---

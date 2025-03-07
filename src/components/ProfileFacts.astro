@@ -1,0 +1,30 @@
+---
+// config import
+import { ME } from '@/config'
+// import Icon from 'astro-icon/components';
+import { Icon } from 'astro-icon/components';
+
+const { profileFacts } = ME
+---
+
+<div class="flex flex-wrap justify-center gap-8">
+    {profileFacts.map((cert) => (
+        <div class="flex flex-col items-center gap-3 w-24 text-center">
+            <a 
+                href={cert.url} 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex flex-col items-center w-full hover:opacity-75 transition-opacity"
+            >
+                <Icon 
+                    name={cert.icon} 
+                    class="w-12 h-12 text-[#0078D4] hover:scale-110 transition-transform" 
+                    aria-label={cert.name}
+                />
+                <span class="text-sm font-medium text-n700 dark:text-n200">
+                    {cert.name}
+                </span>
+            </a>
+        </div>
+    ))}
+</div>
