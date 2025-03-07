@@ -12,7 +12,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://luis-cm.github.io',
+    site: 'https://luiscm17.github.io',
     base: 'luiscm-portolio',
     integrations: [mdx(), react(), tailwind({
         applyBaseStyles: false,
