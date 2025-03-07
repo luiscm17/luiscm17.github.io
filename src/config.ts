@@ -1,5 +1,5 @@
 export const SITE = {
-    website: "https://github.com/luiscm17", // replace this with your deployed domain
+    website: "https://luiscm17.github.io", // replace this with your deployed domain
     title: "Simple Portfolio",
     description: "A simple but beautiful portfolio created with Astro",
     tags: ["portfolio", "Resume cv", "Astro"],
@@ -10,7 +10,7 @@ export const SITE = {
     favicon: "/favicon.png",
     repository: "https://github.com/vito8916/simple-portfolio.git",
     author: "Luis Condori",
-    profile: "https://github.com/luiscm17",
+    profile: "https://luiscm17.github.io",
 }
 
 export const ME = {
@@ -33,7 +33,7 @@ export const ME = {
     contactInfo: {
         email: "luiserwinc@gmail.com",
         linkedin: "https://www.linkedin.com/in/luiscm17",
-        resumeDoc: "resume.pdf",
+        resumeDoc: "./cv-luiscm.pdf",
     },
     aboutMe: "Petroleum Engineer with a focus on drilling and data science (Azure AI/Data Scientist). Experience in process optimization using ML (Python) and simulation tools (OpenWells, Petrel).",
 }
