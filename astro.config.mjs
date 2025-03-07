@@ -13,7 +13,6 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
     site: 'https://luiscm17.github.io',
-    base: 'luiscm-portfolio',
     integrations: [mdx(), react(), tailwind({
         applyBaseStyles: false,
     }),
