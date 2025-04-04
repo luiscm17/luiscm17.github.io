@@ -15,7 +15,7 @@ const languages: Language[] = [
     {
         name: "English",
         level: "Bilingual",
-        description: "I speak fluently and write fluently",
+        description: "I speak and write",
         show: true
     },
     {
