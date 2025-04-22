@@ -1,8 +1,8 @@
 export const SITE = {
     website: "https://luiscm17.github.io", // replace this with your deployed domain
-    title: "Simple Portfolio",
+    title: "Luis CM Portfolio",
     description: "A simple but beautiful portfolio created with Astro",
-    tags: ["portfolio", "Resume cv", "Astro"],
+    tags: ["portfolio", "Resume cv", "Luis CM", "Petroleum Engineer"],
     ogImage: "/og-image.webp",
     logo: "logo",
     logoText: "Luis CM",
@@ -58,10 +58,10 @@ export const SOCIALS = [
         show: false
     },
     {
-        name: "Youtube",
-        url: "https://www.youtube.com/vicbox.dev",
-        icon: "youtube-fill",
-        show: false
+        name: "Linkedin",
+        url: "https://www.linkedin.com/in/luiscm17",
+        icon: "linkedin-fill",
+        show: true
     },
     {
         name: "Microsoft Learn",

@@ -20,8 +20,8 @@ const  education: Education[] = [
     // },
     {
         title: "Bachelor of Petroleum Engineer",
-        startDate: "",
-        endDate: "2024-07-24",
+        startDate: "2017-08",
+        endDate: "2024-07",
         school: "Universidad Mayor de San Andres",
         location: "Bolivia",
         description: "Ingeniería de perforación, optimización de procesos con Machine Learning.",
