@@ -1,0 +1,116 @@
+---
+title: "Pilot AI Drill: Optimization of Geothermal Drilling, ROP Prediction using Machine Learning"
+summary: "Development and evaluation of machine learning models to predict Rate of Penetration (ROP) in geothermal drilling operations, achieving R² of 0.69 and RMSE of 96.06 ft/hr."
+tags:
+    - Python
+    - Scikit-Learn
+    - XGBoost
+    - Random Forest
+    - Machine Learning
+    - Geothermal Energy
+startDate: 2024-12-20
+endDate: 2024-12-20
+author: Luis Condori
+url: https://github.com/luiscm17/pilot-ai-drill
+cover: './images/pro-accountant/drilling.jpeg'
+ogImage: './images/pro-accountant/drilling.jpeg'
+---
+
+## Table of Contents
+1. [Abstract](#abstract)
+2. [Introduction](#introduction)
+    - [Context](#context)
+    - [Objective](#objective)
+3. [Methodology](#methodology)
+    - [Data Acquisition and Preprocessing](#data-acquisition-and-preprocessing)
+    - [Feature Engineering](#feature-engineering)
+    - [Model Selection](#model-selection)
+4. [Results](#results)
+    - [Model Performance](#model-performance)
+    - [Feature Importance](#feature-importance)
+5. [Discussion](#discussion)
+    - [Interpretation](#interpretation)
+    - [Limitations](#limitations)
+6. [Conclusion and Recommendations](#conclusion-and-recommendations)
+
+---
+
+## Abstract
+
+This study presents the development and evaluation of a machine learning model to predict the Rate of Penetration (ROP) in geothermal drilling operations. Using historical data from the Utah FORGE project, we processed approximately 10,857 records, engineered key operational and geological features, and evaluated multiple regression algorithms. The final Random Forest model achieved a Test R² of **0.69** and a Root Mean Squared Error (RMSE) of **96.06 ft/hr**, demonstrating strong generalization capabilities. These results suggest that data-driven models can effectively support real-time drilling optimization, although further integration of high-resolution geological data could enhance predictive power.
+
+---
+
+## Introduction
+
+### Context
+Drilling efficiency is a critical factor in the economic viability of geothermal energy projects. The Rate of Penetration (ROP) serves as a key performance indicator, directly influencing the time and cost of well construction. Traditional physics-based models often struggle to account for the complex, non-linear interactions between drilling parameters and heterogeneous subsurface formations.
+
+### Objective
+The primary objective of this research was to develop a supervised regression model capable of predicting ROP with an R² > 0.75 and RMSE < 110 ft/hr, utilizing surface drilling parameters and available geological data.
+
+---
+
+## Methodology
+
+### Data Acquisition and Preprocessing
+The dataset consisted of drilling logs from the Utah FORGE Well 16-16B(78)-32, spanning depths from 90 ft to 10,946 ft.
+*   **Raw Data:** 10,857 rows with 21 columns.
+*   **Cleaning:** Missing values in geological features (e.g., *anhydrite_pct*, *pyrite_pct*) were significant (>80% missing in some cases) and were handled using iterative imputation and zero-filling where appropriate.
+*   **Target Variable:** **rop_ft_hr** (Rate of Penetration).
+
+### Feature Engineering
+To capture the physical dynamics of drilling, we engineered several interaction features:
+*   **Mechanical Specific Energy (MSE):** A simplified proxy for the energy required to remove a unit volume of rock.
+*   **Interaction Terms:** **rpm_x_torque** (power proxy) and **quartz_x_wob** (abrasiveness interaction).
+*   **Lithology:** Aggregated mineral percentages into broader lithological categories.
+
+### Model Selection
+We evaluated multiple algorithms including Linear Regression (Ridge/Lasso), XGBoost, LightGBM, and Random Forest. Hyperparameter tuning was performed using Optuna to optimize for R² score while minimizing overfitting.
+
+---
+
+## Results
+
+### Model Performance
+The **Random Forest Regressor** was identified as the best-performing model.
+
+| Metric | Training Set | Validation Set | Test Set |
+| :--- | :--- | :--- | :--- |
+| **R² Score** | 0.807 | 0.658 | **0.691** |
+| **RMSE (ft/hr)** | 75.91 | 106.21 | **96.06** |
+| **MAE** | 29.35 | - | 37.87 |
+
+The model successfully met the RMSE target (< 110 ft/hr) but fell slightly short of the ambitious R² target of 0.75. The generalization gap (difference between Train and Test R²) is acceptable, indicating the model is not significantly overfitting.
+
+### Feature Importance
+The analysis of feature importance revealed that depth and mechanical energy inputs are the strongest predictors of ROP:
+1.  **Depth (depth_ft):** 37.7% - The primary driver, likely serving as a proxy for compaction and formation changes.
+2.  **Power Interaction (rpm_x_torque):** 17.5% - Captures the mechanical energy input.
+3.  **Torque (torque_ftlb):** 14.1%
+4.  **Quartz Interaction (quartz_x_wob):** 9.2% - Highlights the impact of formation abrasiveness combined with weight on bit.
+5.  **RPM (rpm):** 5.0%
+
+---
+
+## Discussion
+
+### Interpretation
+The dominance of **depth_ft** suggests that the drilling environment changes systematically with depth in ways that surface parameters alone do not fully capture. The strong performance of **rpm_x_torque** validates the physics-based understanding that mechanical power is fundamental to rock destruction.
+
+### Limitations
+*   **Geological Data Scarcity:** High missingness in mineralogical data likely limited the model's ability to distinguish between formation-specific drilling responses.
+*   **R² Ceiling:** The R² of ~0.69 suggests that ~30% of the variance in ROP remains unexplained, likely due to unobserved downhole vibrations or micro-lithological changes.
+
+---
+
+## Conclusion and Recommendations
+
+The developed Random Forest model is **production-ready** for initial deployment as a drilling advisory tool. It provides reliable baseline predictions for ROP with an error margin of approximately ±96 ft/hr.
+
+**Recommendations for Future Work:**
+1.  **Integrate Real-time Lithology:** Incorporating real-time mud logging or LWD (Logging While Drilling) gamma-ray data could significantly improve accuracy.
+2.  **Vibration Analysis:** Including high-frequency vibration data (if available) could help explain the remaining variance.
+3.  **Model Deployment:** Deploy the model to the OCI Data Science environment to monitor real-time performance against active drilling operations.
+
+---

@@ -1,0 +1,196 @@
+---
+title: "ChurnCheck: Customer Churn Prediction Platform"
+summary: "Analytics platform developed during Oracle ONE Hackathon for predicting customer churn using machine learning, featuring a complete data science pipeline, REST API backend, and interactive dashboard frontend."
+tags:
+    - Java
+    - Spring Boot
+    - Python
+    - Azure AI
+    - MCP
+    - Azure Functions
+    - Microsoft Agent Framework
+    - Machine Learning
+    - Data Science
+    - FastAPI
+    - Docker
+    - REST API
+    - Frontend
+    - JavaScript
+    - Chart.js
+    - Hackathon
+    - Team Development
+    - CI/CD
+startDate: 2025-12-15
+endDate: 2026-01-18
+author: Luis Condori
+url: https://github.com/sjlvanq/nc-oneiila-e14b
+cover: './images/churncheck/logo-churncheck-white.png'
+ogImage: './images/churncheck/logo-churncheck-white.png'
+---
+
+## Table of Contents
+1. [Overview](#overview)
+2. [Challenge Context](#challenge-context)
+3. [Technical Solution](#technical-solution)
+4. [Architecture](#architecture)
+5. [Team & Role](#team-role)
+6. [Key Features](#key-features)
+7. [Technologies Used](#technologies-used)
+8. [Results & Impact](#results-impact)
+
+---
+
+## Overview
+
+**ChurnCheck** is an analytics platform developed during Oracle ONE Hackathon Latam for predicting customer churn. The system transforms raw customer data into actionable insights through machine learning, helping businesses identify at-risk customers and implement retention strategies.
+
+**Live Demo**: Available during hackathon presentation
+**Repository**: [github.com/sjlvanq/nc-oneiila-e14b](https://github.com/sjlvanq/nc-oneiila-e14b)
+
+---
+
+## Challenge Context
+
+**Oracle ONE Hackathon - Latam** brought together multidisciplinary teams to solve intensive innovation challenges in 5 weeks. Our team of 9 members developed a complete customer churn prediction solution under extreme time pressure, competing against teams from across Latin America.
+
+**Problem**: Customer churn represents significant financial impact for subscription-based businesses, with acquisition costs 5-7x higher than retention costs.
+
+---
+
+## Technical Solution
+
+**ChurnCheck** implements a complete data-driven approach:
+
+### Data Science Pipeline
+- **Dataset Analysis**: Gym customer churn dataset with demographic, behavioral, and contract variables
+- **Feature Engineering**: Created meaningful predictors from raw customer data
+- **Model Selection**: Evaluated multiple algorithms, selected optimized Logistic Regression
+- **Performance**: Achieved 92.8% accuracy, 84.5% recall, 85.2% F1-score
+
+### Backend Architecture
+- **Java 21 + Spring Boot 3**: RESTful API with JWT authentication
+- **H2 Database**: In-memory database for rapid prototyping
+- **Microservices**: Model deployed as independent FastAPI service
+- **Security**: Stateless JWT-based authentication system
+
+### Frontend Dashboard
+- **Interactive Analytics**: Real-time churn probability visualization
+- **Risk Classification**: Customer segmentation by risk level
+- **Business Intelligence**: Trend analysis and predictive insights
+- **Responsive Design**: Mobile-friendly interface with Chart.js
+
+---
+
+## Architecture
+
+**Three-pill architecture ensuring scalability and maintainability:**
+
+1. **Data Science Module**: Predictive analytics engine
+2. **Backend API**: Business logic and integration layer  
+3. **Frontend Dashboard**: User interface and visualization
+
+**Communication Flow**: REST APIs with JSON format, enabling independent development and deployment of each component.
+
+---
+
+## Team & Role
+
+**Team H12-25-L-Equipo 14-Data Science** - 9 members, 5-week development cycle
+
+**My Role**: Backend Developer & AI Agent Specialist
+- **API Development**: REST endpoints and JWT authentication
+- **Database Design**: H2 integration and data modeling
+- **Integration**: Connected Data Science microservice via REST
+- **AI Agent Development**: Created intelligent agent with Azure AI integration
+- **MCP Server**: Implemented Model Context Protocol for dynamic data
+- **Team Collaboration**: Coordinated backend-frontend integration
+
+**Team Structure**:
+- **Data Scientists**: Gabriel Abdenago, Wilson Acevedo, Oriana Ortiz, Mario Martínez, Miguel Castillo
+- **Backend Developers**: Iris Criseida, Luis Condori, Silvano Roques
+- **Frontend Developers**: Miguel Figueroa, Iris Criseida, Luis Condori, Silvano Roques
+
+---
+
+## Key Features
+
+### 🤖 Machine Learning Pipeline
+- **Automated Data Processing**: Cleaning, transformation, and feature engineering
+- **Model Training**: Logistic Regression with hyperparameter optimization
+- **Real-time Prediction**: FastAPI microservice for instant scoring
+- **Performance Monitoring**: Model accuracy and business metrics tracking
+
+### 🤖 AI & Automation
+- **Azure AI Agent**: Intelligent customer analysis with natural language
+- **MCP Server**: Model Context Protocol for dynamic data access
+- **Automated Risk Scoring**: Real-time churn probability calculation
+- **CI/CD Pipeline**: Azure Functions deployment automation
+
+### 🔧 Backend Services
+- **Customer Analytics**: Historical data analysis and statistics
+- **Prediction API**: Real-time churn scoring for individual customers
+- **Authentication**: JWT-based secure access control
+- **Data Management**: CRUD operations with H2 database
+
+### 📊 Frontend Dashboard
+- **Risk Visualization**: Color-coded customer risk levels
+- **Trend Analysis**: Interactive charts for churn patterns
+- **Customer Profiles**: Detailed individual customer analytics
+- **Business KPIs**: Churn rate, retention metrics, revenue impact
+
+---
+
+### Technologies Used
+
+### Backend Stack
+- **Java 21**: Core backend language
+- **Spring Boot 3**: REST API framework
+- **Spring Security**: JWT authentication
+- **H2 Database**: In-memory data storage
+- **Maven**: Dependency management
+- **Docker**: Containerization
+
+### Data Science Stack
+- **Python**: ML model development
+- **Scikit-learn**: Machine learning algorithms
+- **Pandas**: Data manipulation and analysis
+- **FastAPI**: Model microservice deployment
+
+### AI & Automation Stack
+- **Azure Functions**: Serverless compute platform
+- **Azure AI Services**: GPT-4 integration for intelligent analysis
+- **Model Context Protocol (MCP)**: Dynamic data access framework
+- **Azure CLI**: Cloud deployment automation
+
+### Frontend Stack
+- **JavaScript**: Core frontend logic
+- **Chart.js**: Data visualization
+- **HTML/CSS**: User interface
+- **Vite**: Build tool and development server
+
+---
+
+## Results & Impact
+
+### Technical Achievements
+- **Model Performance**: 92.8% accuracy, optimized for business use
+- **API Design**: RESTful architecture with proper separation of concerns
+- **AI Integration**: Successfully implemented Azure AI agent with natural language processing
+- **MCP Protocol**: Dynamic data access framework for real-time customer analysis
+- **System Integration**: Full-stack working prototype in 5 weeks
+- **Team Coordination**: Successful 9-person multidisciplinary collaboration
+
+### Hackathon Recognition
+- **Complete Solution**: End-to-end functional prototype with AI agent
+- **Technical Excellence**: Robust architecture and clean code practices
+- **Innovation**: Data-driven approach to business problem solving
+
+### Business Value
+- 
+- **Churn Prediction**: Early identification of at-risk customers for retention strategies
+- **AI-Powered Analytics**: Natural language customer insights and recommendations
+- **Scalable Architecture**: Microservices design for production deployment
+- **Decision Support**: Analytics for business intelligence
+- **Open Source Contribution**: Complete technical documentation and deployment guides
+
+---

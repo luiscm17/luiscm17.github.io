@@ -1,0 +1,179 @@
+---
+title: "ForoHub: Educational Forum REST API"
+summary: "RESTful API for educational forum management built with Spring Boot 3 and Java 24, featuring user management, course administration, and discussion topics with MySQL database integration."
+tags:
+    - Java
+    - Spring Boot
+    - REST API
+    - MySQL
+    - Hibernate
+    - JPA
+    - Flyway
+    - Backend Development
+    - Oracle ONE
+    - Educational Technology
+startDate: 2025-01-01
+endDate: 2025-02-15
+author: Luis Condori
+url: https://github.com/luiscm17/ForoHub-APIRest
+cover: './images/forohub/forohub.png'
+ogImage: './images/forohub/forohub.png'
+---
+
+## Table of Contents
+1. [Overview](#overview)
+2. [Challenge Context](#challenge-context)
+3. [Technical Solution](#technical-solution)
+4. [Architecture](#architecture)
+5. [Key Features](#key-features)
+6. [Technologies Used](#technologies-used)
+7. [Development Process](#development-process)
+8. [Results & Learning](#results-learning)
+
+---
+
+## Overview
+
+**ForoHub** is a comprehensive REST API for educational forum management, developed as part of the Oracle ONE technical challenge. The system enables seamless interaction between students and instructors through course-based discussions, topic management, and collaborative learning features.
+
+**Repository**: [github.com/luiscm17/ForoHub-APIRest](https://github.com/luiscm17/ForoHub-APIRest)
+
+---
+
+## Challenge Context
+
+**Oracle ONE Backend Challenge** required building a complete REST API following industry best practices and modern Java development standards. The project demonstrated proficiency in Spring Boot, database design, and RESTful architecture while solving real-world educational platform requirements.
+
+**Technical Requirements**: Build a scalable, maintainable API with proper separation of concerns, database migrations, and comprehensive documentation.
+
+---
+
+## Technical Solution
+
+**ForoHub** implements a clean architecture approach with proper domain modeling:
+
+### 🏗️ Domain-Driven Design
+- **Entity Modeling**: User, Course, Topic, and Reply entities with proper relationships
+- **DTO Pattern**: Data Transfer Objects for API request/response handling
+- **Service Layer**: Business logic separation from data access
+- **Repository Pattern**: Clean data access abstraction with JPA
+
+### 🗄️ Database Architecture
+- **MySQL Integration**: Production-ready database with proper indexing
+- **Flyway Migrations**: Version-controlled database schema management
+- **Relationship Modeling**: One-to-many and many-to-many relationships
+- **Data Integrity**: Foreign keys and constraints for data consistency
+
+### 🔌 REST API Design
+- **Resource-Based URLs**: RESTful endpoint design following HTTP semantics
+- **Status Codes**: Proper HTTP status code usage for different scenarios
+- **Error Handling**: Global exception handling with meaningful error messages
+- **Validation**: Input validation and business rule enforcement
+
+---
+
+## Architecture
+
+**Layered architecture ensuring maintainability and scalability:**
+
+### Presentation Layer
+- **REST Controllers**: HTTP request handling and response formatting
+- **DTO Objects**: Request/response data transfer objects
+- **Validation**: Input validation and error handling
+
+### Business Layer
+- **Service Classes**: Core business logic implementation
+- **Business Rules**: Domain-specific validation and processing
+- **Transaction Management**: Atomic operations and data consistency
+
+### Data Layer
+- **JPA Entities**: Database entity mapping
+- **Repository Interfaces**: Data access abstraction
+- **Flyway Migrations**: Database version control
+
+---
+
+## Key Features
+
+### 👥 User Management
+- **User Registration**: Account creation with profile information
+- **Authentication**: Secure user authentication and authorization
+- **Profile Management**: User information updates and preferences
+
+### 📚 Course Administration
+- **Course Creation**: Instructors can create and manage courses
+- **Course Enrollment**: Student registration and course access
+- **Course Metadata**: Descriptions, schedules, and instructor assignments
+
+### 💬 Discussion System
+- **Topic Creation**: Students can initiate discussion topics
+- **Reply Management**: Structured responses with solution marking
+- **Topic Tracking**: Follow discussions and receive notifications
+
+### 🔧 Administrative Features
+- **Content Moderation**: Topic and reply management capabilities
+- **User Administration**: User role management and permissions
+- **Analytics**: Discussion activity and engagement metrics
+
+---
+
+## Technologies Used
+
+### Core Stack
+- **Java 24**: Latest Java version with modern features
+- **Spring Boot 3.5.4**: Modern Spring framework with auto-configuration
+- **Spring Data JPA**: Database access and ORM functionality
+- **Spring Web**: REST API development and HTTP handling
+
+### Database & Persistence
+- **MySQL 8.0+**: Production-grade relational database
+- **Hibernate**: JPA implementation for object-relational mapping
+- **Flyway**: Database migration management and versioning
+
+### Development Tools
+- **Maven**: Dependency management and build automation
+- **Lombok**: Code generation for boilerplate reduction
+- **Spring Boot DevTools**: Development productivity tools
+
+---
+
+## Development Process
+
+### 🎯 Planning & Design
+- **Requirements Analysis**: Understanding educational forum needs
+- **Database Design**: Entity relationship modeling and schema creation
+- **API Design**: RESTful endpoint planning and documentation
+
+### 🛠️ Implementation
+- **Iterative Development**: Feature-by-feature implementation approach
+- **Test-Driven Development**: Unit tests for business logic validation
+- **Code Quality**: Clean code principles and design patterns application
+
+### 📋 Documentation
+- **API Documentation**: Comprehensive endpoint examples and usage
+- **README Guide**: Setup instructions and deployment procedures
+- **Code Comments**: Inline documentation for complex business logic
+
+---
+
+## Results & Learning
+
+### 🏆 Technical Achievements
+- **Complete REST API**: Full CRUD operations for all entities
+- **Database Integration**: Production-ready MySQL with proper migrations
+- **Clean Architecture**: Well-structured code with separation of concerns
+- **API Documentation**: Comprehensive examples and usage guides
+
+### 📚 Learning Outcomes
+- **Spring Boot Mastery**: Deep understanding of Spring ecosystem
+- **Database Design**: Advanced JPA and Hibernate usage patterns
+- **REST Best Practices**: Proper API design and HTTP semantics
+- **Clean Code**: Application of SOLID principles and design patterns
+
+### 🎓 Oracle ONE Recognition
+- **Technical Challenge Completion**: Successfully met all requirements
+- **Code Quality**: Recognition for clean, maintainable code structure
+- **Documentation Excellence**: Comprehensive project documentation
+- **Production Readiness**: Deployment-ready application with proper configuration
+
+---
