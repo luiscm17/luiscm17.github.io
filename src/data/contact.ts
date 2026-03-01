@@ -6,7 +6,7 @@ interface Contact {
 
 const contact: Contact[] = [
     {
-    name: "luiserwinc@gmail.com",
+    name: "luiserwin.cm@outlook.com",
     description: "Understand AI concepts and related Microsoft Azure services",
     icon: "mail"
     },
