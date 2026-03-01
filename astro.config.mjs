@@ -18,8 +18,8 @@ export default defineConfig({
     }),
     icon({
         include: {
-            'petroleum-tools': ['./src/icons/*.svg'],
-            'custom-icons': ['./src/icons/*.svg'] // Para íconos generales
+            'petroleum-tools': ['./src/icons/*.{svg,png,jpg,jpeg}'],
+            'custom-icons': ['./src/icons/*.{svg,png,jpg,jpeg}'] // Para íconos generales
         }
     }), 
     sitemap()],
@@ -29,6 +29,4 @@ export default defineConfig({
             wrap: true,
         },
     },
-    experimental: {
-        svg: true,
-    }});
+    });
