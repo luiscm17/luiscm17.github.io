@@ -15,7 +15,7 @@ export const SITE = {
 
 export const ME = {
     name: "Luis Condori",
-    profession: "Petroleum Engineer | Data Scientist",
+    profession: "Petroleum Engineer | Data Scientist | AI Engineer",
     profileImage: "pp2.png",
     profileFacts: [
         {
@@ -35,7 +35,7 @@ export const ME = {
         linkedin: "https://www.linkedin.com/in/luiscm17",
         resumeDoc: "./cv-luiscm.pdf",
     },
-    aboutMe: "Petroleum Engineer with a focus on drilling and data science (Azure AI/Data Scientist). Experience in process optimization using ML (Python) and simulation tools (OpenWells, Petrel).",
+    aboutMe: "Petroleum Engineer specializing in digital transformation and data science applications in the energy sector. Experienced in developing analytical solutions with Python, Java, Power BI, and Azure Cloud to optimize processes and decision-making in hydrocarbons. Certified in Azure AI Engineer Associate, Azure Data Scientist Associate, and OCI Generative AI Professional. Participated in Microsoft and Oracle hackathons, creating ML/AI innovations. Focus on integrating AI for oil & gas optimization, such as drilling efficiency, combining domain expertise with software development.",
 }
 
 export const SOCIALS = [

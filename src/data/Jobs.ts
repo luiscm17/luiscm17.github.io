@@ -44,30 +44,58 @@ interface WorkExperience {
  */
 const workExperience: WorkExperience[] = [
     {
+        title: "Gas Installation Project Technician",
+        startDate: "2025-01-01",
+        endDate: undefined,  // or "Present" – use undefined for current
+        company: "VIMAVI Constructora",
+        location: "La Paz, Bolivia",
+        description: "Technical design and cost estimation for residential and commercial gas installations (occasional projects post-graduation).",
+        goals: [
+            "Elaborated AutoCAD plans and cost estimates compliant with YPFB standards",
+            "Optimized design workflows, achieving greater efficiency in technical deliverables",
+            "Coordinated occasional gas installation projects"
+        ],
+        currentJob: true,
+    },
+    {
+        title: "Freelance Consultant in Analytics and Automation",
+        startDate: "2024-07-01",
+        endDate: undefined,
+        company: "Private Clients",
+        location: "Remote",
+        description: "Provided data analytics, automation, and technical consulting services while pursuing AI/ML certifications and personal projects.",
+        goals: [
+            "Implemented data cleaning, transformation, and automation pipelines in Power BI",
+            "Standardized deliverables under confidentiality agreements and governance best practices",
+            "Supported clients with technical analysis and process optimization (occasional)"
+        ],
+        currentJob: true,
+    },
+    {
         title: "Operations Assistant",
         startDate: "2023-04-01",
         endDate: "2023-09-01",
         company: "National Hydrocarbons Agency (ANH)",
-        location: "Bolivia",
-        description: "Technical operations support for Bolivia's fuel monitoring systems.",
+        location: "La Paz, Bolivia",
+        description: "Supported technical operations and regulatory compliance in Bolivia's hydrocarbon monitoring systems.",
         goals: [
-            "Managed B-SISA system operations for vehicle registration and fuel control",
-            "Conducted field inspections at service stations for regulatory compliance",
-            "Optimized database management processes for fuel supervision"
+            "Managed data and automated flows in the B-SISA fuel control system",
+            "Conducted field inspections and verification of service station compliance",
+            "Optimized database and reporting processes for fuel supervision"
         ],
         currentJob: false,
     },
     {
-        title: "Research Assistant",
+        title: "Research Assistant (Eurekarburos 2.0)",
         startDate: "2022-07-01",
         endDate: "2022-12-01",
         company: "National Hydrocarbons Agency (ANH)",
-        location: "Bolivia",
-        description: "Petroleum engineering research and data analysis initiatives.",
+        location: "La Paz, Bolivia",
+        description: "Conducted petroleum engineering research, software development, and data analysis for industry innovation.",
         goals: [
-            "Developed Python-based well production optimization tools",
-            "Implemented ML models for drilling parameter analysis",
-            "Awarded 1st place for innovative petroleum engineering solution"
+            "Developed Python-based predictive tools and data analysis for well production",
+            "Implemented early ML models for drilling parameter optimization",
+            "Awarded 1st place in Eurekarburos 2.0 for innovative predictive analysis solution"
         ],
         currentJob: false,
     },
@@ -76,26 +104,26 @@ const workExperience: WorkExperience[] = [
         startDate: "2022-02-01",
         endDate: "2022-06-01",
         company: "VIMAVI Constructora",
-        location: "Bolivia",
-        description: "Residential gas installation projects management.",
+        location: "La Paz, Bolivia",
+        description: "Managed design and execution of natural gas installation projects.",
         goals: [
-            "Designed AutoCAD blueprints meeting YPFB Redes standards",
-            "Reduced project delivery time by 60% through process optimization",
-            "Coordinated logistics for simultaneous installation projects"
+            "Designed AutoCAD blueprints and cost estimates for natural gas networks",
+            "Reduced project delivery times by 60% through process improvements",
+            "Coordinated logistics for multiple simultaneous installations"
         ],
         currentJob: false,
     },
     {
-        title: "Safety Supervision Assistant",
+        title: "Safety Supervision Assistant (SMS)",
         startDate: "2021-10-01",
         endDate: "2021-12-01",
         company: "Oil Well Drilling",
-        location: "Bolivia",
-        description: "Gas network construction quality control.",
+        location: "El Alto, Bolivia",
+        description: "Assisted in safety supervision and quality control during gas network and drilling operations.",
         goals: [
-            "Supervised HDPE welding operations for secondary gas networks",
-            "Completed critical infrastructure project in 3-month timeframe",
-            "Managed equipment logistics for field operations"
+            "Supervised HDPE welding and civil works for secondary gas networks",
+            "Ensured full compliance with technical and safety standards",
+            "Managed equipment logistics and completed project in 3-month timeframe"
         ],
         currentJob: false,
     }
