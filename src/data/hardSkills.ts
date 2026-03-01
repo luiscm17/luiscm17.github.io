@@ -9,42 +9,42 @@ const hardSkills: HardSkill[] = [
   {
     name: "Petrel",
     description: "Software for seismic interpretation, reservoir modeling, and geological analysis",
-    icon: "/src/assets/petrel.png"
+    icon: "/petrel.png"
   },
   {
     name: "Aspen HYSYS",
     description: "Process simulation tool for designing and optimizing chemical and petroleum plants",
-    icon: "/src/assets/hysys.png"
+    icon: "/hysys.png"
   },
   {
     name: "Pipesim",
     description: "Multiphase flow simulation for well and pipeline network design",
-    icon: "/src/assets/pipesim.png"
+    icon: "/pipesim.png"
   },
   {
     name: "Techlog",
     description: "Petrophysical analysis and well log interpretation software",
-    icon: "/src/assets/techlog.png"
+    icon: "/techlog.png"
   },
   {
     name: "ECLIPSE",
     description: "Reservoir simulation for black-oil and compositional modeling",
-    icon: "/src/assets/eclipse.png"
+    icon: "/eclipse.png"
   },
   {
     name: "Landmark Compass",
     description: "Directional well planning and trajectory design tool",
-    icon: "/src/assets/landmark-edt.png"
+    icon: "/landmark-edt.png"
   },
   {
     name: "Landmark WellPlan",
     description: "Wellbore mechanical design and torque & drag analysis software",
-    icon: "/src/assets/landmark-edt.png"
+    icon: "/landmark-edt.png"
   },
   {
     name: "Landmark CasingWear",
     description: "Casing wear prediction and mitigation during drilling operations",
-    icon: "/src/assets/landmark-edt.png"
+    icon: "/landmark-edt.png"
   },
   {
     name: "AutoCAD",
@@ -108,7 +108,7 @@ const hardSkills: HardSkill[] = [
   {
     name: "Microsoft Agent Framework",
     description: "Framework for creating and orchestrating multi-agent AI systems",
-    icon: "/src/assets/agent-framework.png"
+    icon: "/agent-framework.png"
   },
   {
     name: "LangChain",
@@ -147,7 +147,7 @@ const hardSkills: HardSkill[] = [
   {
     name: "Docling",
     description: "Document parsing library for extracting text, tables, and figures from PDFs",
-    icon: "/src/assets/docling.png"
+    icon: "/docling.png"
   },
   {
     name: "Azure AI Search",

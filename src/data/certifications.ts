@@ -28,19 +28,19 @@ const certifications: Certifications[] = [
     {
         name: "OCI 2025 Certified Data Science Professional",
         description: "Demonstrate expertise in data science using Oracle Cloud Infrastructure",
-        icon: "/src/assets/OCI25DSOCP.png",
+        icon: "/OCI25DSOCP.png",
         url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=90414E07DF1CD6235153F12479983C3CCB54EA9E01F7864D4D27D2B81D21FB35"
     },
     {
         name: "OCI 2025 Certified Generative AI Professional",
         description: "Demonstrate expertise in generative AI using Oracle Cloud Infrastructure",
-        icon: "/src/assets/OCI25GAIOCP.png",
+        icon: "/OCI25GAIOCP.png",
         url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=32E75992B08FE6EB7D2280A7C5495C652AA45171EA74535D765727366F9208FF"
     },
     {
         name: "OCI 2025 Certified Foundations Associate",
         description: "Demonstrate foundational knowledge of Oracle Cloud Infrastructure",
-        icon: "/src/assets/OCI25FNDCFAV1.png",
+        icon: "/OCI25FNDCFAV1.png",
         url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=DF7E76A0A8DFE0C3298AA6D8A74088B00F9DC6D558B790B903680FDCB64B0C3E"
     },
     {
